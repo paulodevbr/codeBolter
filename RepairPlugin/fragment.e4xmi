@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_wyRcMERyEeeksKngtG1K5g">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_5qhPQERyEeeksKngtG1K5g" featurename="commands" parentElementId="xpath:/">
+    <elements xsi:type="commands:Command" xmi:id="_KIYI0ERzEeeksKngtG1K5g" elementId="repairplugin.command.sample" commandName="Sample"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_eXyBYERzEeeksKngtG1K5g" featurename="handlers" parentElementId="xpath:/">
+    <elements xsi:type="commands:Handler" xmi:id="_2LX88ER0EeeksKngtG1K5g" elementId="repairplugin.handler.0" command="_KIYI0ERzEeeksKngtG1K5g"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_8b8jIER0EeeksKngtG1K5g" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_CwV5YER1EeeksKngtG1K5g" elementId="repairplugin.menucontribution.0">
+      <children xsi:type="menu:Menu" xmi:id="_E_Zx8ER1EeeksKngtG1K5g" elementId="repairplugin.menu.e4samplemenu" label="e4 sample menu">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_IVSIoER1EeeksKngtG1K5g" elementId="id.e4Sample" label="e4 sample menu" iconURI="platform:/plugin/RepairPlugin/icons/sample.gif" command="_KIYI0ERzEeeksKngtG1K5g"/>
+      </children>
+    </elements>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_UjqKAER1EeeksKngtG1K5g" featurename="trimContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:TrimContribution" xmi:id="_ZxKJoER1EeeksKngtG1K5g" elementId="repairplugin.trimcontribution.0" parentId="org.eclipse.ui.main.toolbar">
+      <children xsi:type="menu:ToolBar" xmi:id="_prnbMER1EeeksKngtG1K5g" elementId="repairplugin.toolbar.0">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_rBBH4ER1EeeksKngtG1K5g" elementId="repairplugin.handledtoolitem.e4Button" label="e4 button" command="_KIYI0ERzEeeksKngtG1K5g"/>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
