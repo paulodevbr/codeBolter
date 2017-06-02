@@ -11,14 +11,15 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-public class PageAngelixPath extends WizardPage{
+public class PageCode extends WizardPage{
 	
-	private Text toolPath;
+	private Text codePath;
+	private Text fileName;
 	private Composite container;
 
-	protected PageAngelixPath() {
+	protected PageCode() {
 		super("First Page");
-		setTitle("Angelix Path");
+		setTitle("Code parameters");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -29,14 +30,14 @@ public class PageAngelixPath extends WizardPage{
         GridLayout layout = new GridLayout();
         container.setLayout(layout);
         layout.numColumns = 1;
-        Label label1 = new Label(container, SWT.NONE);
-        label1.setText("Angelix Path");
+        Label codeLabel = new Label(container, SWT.NONE);
+        codeLabel.setText("Path to your source");
         
         
         
-        toolPath = new Text(container, SWT.BORDER | SWT.SINGLE);
-        toolPath.setText("");
-        toolPath.addKeyListener(new KeyListener() {
+        codePath = new Text(container, SWT.BORDER | SWT.SINGLE);
+        codePath.setText("");
+        codePath.addKeyListener(new KeyListener() {
 
 
 			@Override
@@ -48,7 +49,7 @@ public class PageAngelixPath extends WizardPage{
 			@Override
 			public void keyReleased(org.eclipse.swt.events.KeyEvent e) {
 				// TODO Auto-generated method stub
-				if (!toolPath.getText().isEmpty()) {
+				if (!codePath.getText().isEmpty()) {
                     setPageComplete(true);
 
                 }
@@ -56,13 +57,39 @@ public class PageAngelixPath extends WizardPage{
 			}
 
         });
-        Label label2 = new Label(container, SWT.NONE);
-        label2.setText("\nNote that you need Angelix installed \n"
-        		+ "In case you don't, you can download it here:\n"
-        		+ "http://angelix.io/");
+        
+        Label fileLabel = new Label(container, SWT.NONE);
+        fileLabel.setText("File name .c");
+        
+        
+        
+        fileName = new Text(container, SWT.BORDER | SWT.SINGLE);
+        fileName.setText("");
+        fileName.addKeyListener(new KeyListener() {
+
+
+			@Override
+			public void keyPressed(org.eclipse.swt.events.KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void keyReleased(org.eclipse.swt.events.KeyEvent e) {
+				// TODO Auto-generated method stub
+				if (!fileName.getText().isEmpty()) {
+                    setPageComplete(true);
+
+                }
+				
+			}
+
+        });
+       
         
         GridData gd = new GridData(GridData.FILL_HORIZONTAL);
-        toolPath.setLayoutData(gd);
+        codePath.setLayoutData(gd);
+        fileName.setLayoutData(gd);
         
         
         // required to avoid an error in the system
@@ -70,13 +97,14 @@ public class PageAngelixPath extends WizardPage{
         setPageComplete(false);
 		
 	}
+	
 
-	public String getText1() {
-		return toolPath.getText();
+	public String getCodePath() {
+		return codePath.getText();
+	}
+	public String getFileName() {
+		return fileName.getText();
 	}
 
-	public void setText1(Text text1) {
-		this.toolPath = text1;
-	}
 
 }
