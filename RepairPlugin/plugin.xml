@@ -57,12 +57,5 @@
          </toolbar>
       </menuContribution>
    </extension>
-   <extension
-         id="RepairPlugin.fragment"
-         point="org.eclipse.e4.workbench.model">
-      <fragment
-            uri="fragment.e4xmi">
-      </fragment>
-   </extension>
 
 </plugin>
